@@ -7,13 +7,6 @@ import (
 	"golang.org/x/text/transform"
 )
 
-var encodings = []string{
-	"iso-2022-jp",
-	"euc-jp",
-	"utf-8",
-	"sjis",
-}
-
 // Converts the specified charset to UTF-8.
 func Decode(src []byte, charSet string) (string, error) {
 	e, _ := charset.Lookup(charSet)

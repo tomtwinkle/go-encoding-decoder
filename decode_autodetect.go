@@ -8,6 +8,13 @@ import (
 	"unicode/utf8"
 )
 
+var encodings = []string{
+	"iso-2022-jp",
+	"euc-jp",
+	"utf-8",
+	"sjis",
+}
+
 // Converts to UTF-8.
 // Charset (UTF-8, Shift-JIS, EUC-JP, ISO-2022-JP) is automatically detected.
 func DecodeAutoDetect(src []byte) (string, error) {
