@@ -16,7 +16,7 @@ func TestDecodeAutoDetect(t *testing.T) {
 
 	t.Run("UTF-8 BOM", func(t *testing.T) {
 		src := MustReadFile(t, "fixture/utf-8bom.txt")
-		expected := MustReadFile(t, "fixture/utf-8.txt")
+		expected := MustReadFile(t, "fixture/utf-8bom.txt")
 		actual, err := DecodeAutoDetect(src)
 		assert.NoError(t, err)
 		assert.Equal(t, string(expected), actual)
